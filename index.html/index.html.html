@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Lost and Found System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d1117;
+      color: #e6edf3;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      background-color: #0077cc;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin: 0;
+    }
+
+    h2, h3 {
+      color: #58a6ff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      background: #161b22;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    }
+
+    form {
+      margin-top: 10px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #c9d1d9;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      font-size: 1rem;
+      background-color: #0d1117;
+      color: #e6edf3;
+    }
+
+    input[type="text"]:focus, textarea:focus {
+      outline: none;
+      border-color: #58a6ff;
+      box-shadow: 0 0 5px #58a6ff;
+    }
+
+    input[type="submit"] {
+      background-color: #238636;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2ea043;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      background: #21262d;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #30363d;
+    }
+
+    img {
+      display: block;
+      margin: 10px auto;
+      border: 2px solid #58a6ff;
+      border-radius: 8px;
+      padding: 5px;
+      background-color: #0d1117;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background-color: #30363d;
+      margin: 20px 0;
+    }
+
+    p {
+      color: #8b949e;
+    }
+
+    .note {
+      text-align: center;
+      font-style: italic;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Smart Lost and Found System</h1>
+
+  <div class="container">
+    <!-- QR Code Section -->
+    <h3>📱 Scan this QR to open this page:</h3>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=lostfound.html" alt="QR Code">
+  </div>
+
+  <div class="container">
+    <!-- Report Form -->
+    <h2>Report Lost or Found Item</h2>
+    <form>
+      <label>Type:</label><br>
+      <input type="radio" name="type" value="Lost"> Lost
+      <input type="radio" name="type" value="Found"> Found
+      <br><br>
+
+      <label>Item Name:</label><br>
+      <input type="text" name="itemname" placeholder="e.g. Water Bottle"><br>
+
+      <label>Description:</label><br>
+      <textarea name="description" rows="4" cols="40" placeholder="Color, size, special marks..."></textarea><br>
+
+      <label>Place:</label><br>
+      <input type="text" name="place" placeholder="Where was it lost/found?"><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div class="container">
+    <!-- Sample Item List -->
+    <h2>Items List</h2>
+    <ul>
+      <li><strong>Lost:</strong> Red Pencil Box - Near Library</li>
+      <li><strong>Found:</strong> Black Umbrella - Playground</li>
+    </ul>
+    <p class="note">Note: This is a simple demo. The QR code above links to this same page.</p>
+  </div>
+</body>
+</html>
